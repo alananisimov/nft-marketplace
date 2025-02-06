@@ -1,0 +1,11 @@
+export const AUTH_ERRORS = {
+  UNAUTHORIZED: "UNAUTHORIZED",
+  TOKEN_EXPIRED: "TOKEN_EXPIRED",
+  REFRESH_FAILED: "REFRESH_FAILED",
+  INVALID_CREDENTIALS: "INVALID_CREDENTIALS",
+  NETWORK_ERROR: "NETWORK_ERROR",
+} as const;
+
+export const STORAGE_KEY = "auth-storage";
+export const TOKEN_BUFFER_TIME = 30;
+export const AUTH_COOKIE_NAME = "acme.session-token";

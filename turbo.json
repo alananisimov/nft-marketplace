@@ -1,0 +1,78 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "topo": {
+      "dependsOn": ["^topo"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        ".cache/tsbuildinfo.json",
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**",
+        ".next/static/**",
+        ".next/standalone/**"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": false
+    },
+    "format": {
+      "outputs": [".cache/.prettiercache"],
+      "outputLogs": "new-only"
+    },
+    "lint": {
+      "dependsOn": ["^topo", "^build"],
+      "outputs": [".cache/.eslintcache"]
+    },
+    "typecheck": {
+      "dependsOn": ["^topo", "^build"],
+      "outputs": [".cache/tsbuildinfo.json"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "//#clean": {
+      "cache": false
+    },
+    "push": {
+      "cache": false,
+      "interactive": true
+    },
+    "studio": {
+      "cache": false,
+      "persistent": true
+    },
+    "ui-add": {
+      "cache": false,
+      "interactive": true
+    }
+  },
+  "globalEnv": [
+    "POSTGRES_URL",
+    "API_URL",
+    "NEXT_PUBLIC_API_URL",
+    "AUTH_REDIRECT_PROXY_URL",
+    "AUTH_SECRET",
+    "PORT",
+    "API_PORT",
+    "NEXT_PUBLIC_API_PORT",
+    "NEXT_PUBLIC_MINIO_URL",
+    "NEXTAUTH_URL",
+    "HOSTNAME",
+    "SKIP_ENV_VALIDATION",
+    "NEXT_TELEMETRY_DISABLED",
+    "NODE_ENV"
+  ],
+  "globalPassThroughEnv": [
+    "NODE_ENV",
+    "CI",
+    "VERCEL",
+    "VERCEL_ENV",
+    "VERCEL_URL",
+    "npm_lifecycle_event"
+  ]
+}

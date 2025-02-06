@@ -1,0 +1,13 @@
+
+> @acme/bot@0.1.0 dev /Users/ekaterinaa/Developer/Work/next/create-t3-turbo/apps/bot
+> pnpm with-env tsx --watch ./src/index.ts
+
+
+> @acme/bot@0.1.0 with-env /Users/ekaterinaa/Developer/Work/next/create-t3-turbo/apps/bot
+> dotenv -e ../../.env.local -- "tsx" "--watch" "./src/index.ts"
+
+[31mFailed running './src/index.ts'[39m
+c[32mRestarting './src/index.ts'[39m
+[31mFailed running './src/index.ts'[39m
+c[32mRestarting './src/index.ts'[39m
+[31mFailed running './src/index.ts'[39m

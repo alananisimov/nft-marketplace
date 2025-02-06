@@ -1,0 +1,28 @@
+{
+  "name": "@acme/user-bot",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "clean": "git clean -xdf .cache .expo .turbo android ios node_modules",
+    "dev": "pnpm with-env tsx --tsconfig tsconfig.json --watch ./src/index.ts",
+    "start": "pnpm with-env tsx --tsconfig tsconfig.json ./src/index.ts",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env.local --"
+  },
+  "dependencies": {
+    "@acme/tsconfig": "workspace:*",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:*",
+    "@acme/prettier-config": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  },
+  "prettier": "@acme/prettier-config"
+}

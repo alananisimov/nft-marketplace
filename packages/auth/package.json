@@ -1,0 +1,62 @@
+{
+  "name": "@acme/auth",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "react-server": "./src/index.rsc.ts",
+      "default": "./src/index.ts"
+    },
+    "./token": "./src/utils/token.ts",
+    "./env": "./env.ts",
+    "./middleware": "./src/middleware/auth-middleware.ts",
+    "./auth-service": "./src/services/auth-session.service.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@acme/db": "workspace:^",
+    "@auth/core": "0.34.2",
+    "@auth/drizzle-adapter": "^1.4.2",
+    "@auth/express": "^0.8.4",
+    "@t3-oss/env-nextjs": "^0.11.0",
+    "@trpc/server": "^11.0.0-rc.477",
+    "bcrypt-edge": "^0.1.0",
+    "bcryptjs": "^2.4.3",
+    "crypto": "^1.0.1",
+    "jwt-decode": "^4.0.0",
+    "ky": "^1.7.2",
+    "next": "15.0.3",
+    "next-auth": "5.0.0-beta.25",
+    "pino-pretty": "^13.0.0",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19",
+    "stream": "^0.0.3",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:*",
+    "@acme/prettier-config": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
+    "@types/bcryptjs": "^2.4.6",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  },
+  "browser": {
+    "crypto": false,
+    "stream": false
+  },
+  "peerDependencies": {
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19"
+  },
+  "prettier": "@acme/prettier-config"
+}
+
