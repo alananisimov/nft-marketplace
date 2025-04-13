@@ -1,5 +1,7 @@
 "use client";
 
+import { useAtom } from "jotai";
+
 import {
   Drawer,
   DrawerContent,
@@ -7,10 +9,9 @@ import {
   DrawerTitle,
 } from "@acme/ui/drawer";
 
-import { RewardsView } from "./rewards-view";
 import { api } from "~/app/providers/trpc-provider/react";
-import { useAtom } from "jotai";
 import { rewardsDrawerOpenAtom } from "../../model/store";
+import { RewardsView } from "./rewards-view";
 
 interface RewardsDrawerProps {
   nftId: string;

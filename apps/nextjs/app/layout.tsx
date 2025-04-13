@@ -38,7 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <RootProviders>
           <div className="md:hidden">{children}</div>
         </RootProviders>
-        <div className="h-screen hidden md:block">
+        <div className="hidden h-screen md:block">
           <H1 className="absolute left-1/2 top-1/2 hidden translate-x-[-50%] translate-y-[-50%] md:block">
             Please use this app only in telegram
           </H1>

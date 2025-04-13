@@ -5,7 +5,7 @@ import { LoginLinks } from "./login-links";
 
 export function LoginView() {
   return (
-    <div className="md:mt-[142px] h-screen justify-center mt-6 flex flex-col gap-y-14 px-6">
+    <div className="mt-6 flex h-screen flex-col justify-center gap-y-14 px-6 md:mt-[142px]">
       <H1>Login your Account</H1>
       <LoginForm />
       <LoginLinks />

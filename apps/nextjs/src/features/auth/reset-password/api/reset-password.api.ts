@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import { api } from "~/app/providers/trpc-provider/react";
 import type { TVerification } from "~/entities/verification/model/verification.types";
+import { api } from "~/app/providers/trpc-provider/react";
 import { useTelegramData } from "~/shared/hooks/use-tg-data";
 
 interface UseResetPasswordApiProps {

@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
-import { api } from "~/app/providers/trpc-provider/react";
-import { useResetPasswordApi } from "../../api/reset-password.api";
 import type {
   PasswordFormData,
   RecoveryStep,
   StellarKeyFormData,
 } from "../reset-password.types";
+import { api } from "~/app/providers/trpc-provider/react";
+import { useResetPasswordApi } from "../../api/reset-password.api";
 
 interface UseResetPasswordProps {
   onSuccess?: () => void;
